@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.custom-overlay {
+  pointer-events: none; /* allow clicks to pass through */
+}
