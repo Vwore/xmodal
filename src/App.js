@@ -45,6 +45,7 @@ function App() {
         }}
         style={customStyles}
         contentLabel="Example Modal"
+        shouldCloseOnOverlayClick={true} // ✅ This is needed
       >
         <div className="modal">
           <div className="modal-content">
@@ -54,14 +55,11 @@ function App() {
                 e.preventDefault();
                 if (userInput.phone.length !== 10) {
                   alert("Invalid phone number");
-                }
-                else if (userInput.email.includes("@") === false) {
+                } else if (userInput.email.includes("@") === false) {
                   alert("Invalid email");
-                }
-                else if (isFutureDate(userInput.dob)) {
+                } else if (isFutureDate(userInput.dob)) {
                   alert("Invalid date of birth");
-                }
-                else setShowModal(false);
+                } else setShowModal(false);
               }}
             >
               <div>
