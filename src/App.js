@@ -46,8 +46,6 @@ function App() {
         style={customStyles}
         contentLabel="Example Modal"
         shouldCloseOnOverlayClick={true} // ✅ This is needed
-        overlayClassName="custom-overlay"
-
       >
         <div className="modal">
           <div className="modal-content">
