@@ -20,6 +20,8 @@ function isFutureDate(inputDate) {
 }
 
 function App() {
+  Modal.setAppElement("#root");
+  Modal.defaultStyles.overlay.zIndex = 1000;
   const [showModal, setShowModal] = useState(false);
   const [userInput, setUserInput] = useState({
     user: "",
@@ -46,6 +48,7 @@ function App() {
         style={customStyles}
         contentLabel="Example Modal"
         shouldCloseOnOverlayClick={true} // ✅ This is needed
+        parentSelector={() => document.querySelector("#modal-root")}
       >
         <div className="modal">
           <div className="modal-content">
